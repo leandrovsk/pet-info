@@ -1,0 +1,132 @@
+main {
+   position: relative;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   z-index: 0;
+}
+
+header {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   width: 1000px;
+   margin: 64px 0px;
+}
+
+header > span {
+   display: flex;
+   align-items: center;
+   position: relative;
+}
+
+header > h3 {
+   color: var(--gray100);
+   font-size: var(--font-size-5);
+   font-weight: var(--font-weight-2);
+   line-height: 36px;
+}
+
+header > span > div {
+   display: flex;
+   align-items: center;
+   gap: 12px;
+}
+
+.new-post-btn {
+   height: 38px;
+   padding: 0px 16px;
+   background-color: var(--brand100);
+   border: 1px solid var(--brand100);
+   color: var(--gray900);
+   font-weight: var(--font-weight-2);
+   font-size: var(--font-size-2);
+   border-radius: var(--radius);
+   cursor: pointer;
+}
+
+.new-post-btn:hover {
+   background-color: var(--brand200);
+}
+
+header > span > nav {
+   display: flex;
+   width: 220px;
+   flex-direction: column;
+   position: absolute;
+   top: -200px;
+   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+header > span:hover > nav {
+   animation: navToast 300ms ease;
+   top: 42px;
+}
+
+header figure {
+   height: 42px;
+}
+
+.avatar {
+   width: 41px;
+   border-radius: 50%;
+   border: 1px solid var(--brand100);
+}
+
+.username {
+   height: 55px;
+   padding-left: 17px;
+   background-color: var(--gray900);
+   border-radius: var(--radius);
+   color: var(--gray100);
+   font-weight: var(--font-weight-2);
+   display: flex;
+   align-items: center;
+   font-size: var(--font-size-2);
+}
+
+.logout-btn {
+   background-color: var(--gray900);
+   color: var(--gray400);
+   border: none;
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   padding-left: 17px;
+   height: 55px;
+   cursor: pointer;
+   transition: ease 0.5s;
+   font-size: var(--font-size-1);
+   font-weight: var(--font-weight-2);
+}
+
+.logout-btn:hover {
+   background-color: var(--gray700);
+   color: var(--gray100);
+}
+
+.logout-btn img {
+   width: 14px;
+}
+
+.feed-bar-container {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: var(--gray800);
+   height: 64px;
+   width: 100%;
+}
+
+.feed-bar-container h3 {
+   width: 1000px;
+   color: var(--gray100);
+   font-weight: var(--font-weight-2);
+   font-size: var(--font-size-4);
+}
+
+@keyframes navToast {
+   0% {top:0px; opacity: 0%}
+   70% {top:42px; opacity: 30%}
+   100% {top:42px; opacity: 100%}
+}

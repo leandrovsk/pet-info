@@ -1,0 +1,109 @@
+
+.article-section {
+   display: flex;
+   flex-direction: column;
+   gap: 64px;
+   padding: 35px 0px 80px 0px;
+   width: 1000px;
+   max-width: 100%;
+}
+
+.article-top-container {
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+   gap: 15px;
+   width: 100%;
+   position: relative;
+}
+
+.article {
+   display: flex;
+   flex-direction: column;
+   gap: 24px;
+   width: 100%;
+}
+
+.article-top-container > figure > img {
+   width: 32px;
+   border-radius: 50%;
+}
+
+.post-btns-container {
+   position: absolute;
+   display: flex;
+   gap: 12px;
+   right: 0;
+}
+
+.edit-post-btn {
+   height: 32px;
+   padding: 0px 8px;
+   border-radius: var(--radius);
+   font-weight: var(--font-weight-2);
+   border: 1px solid var(--gray600);
+   cursor: pointer;
+   background-color: transparent;
+   color: var(--gray100);
+   transition: ease 0.3s;
+}
+
+.edit-post-btn:hover {
+   background-color: var(--gray800);
+}
+
+.delete-post-btn {
+   height: 32px;
+   padding: 0px 8px;
+   border-radius: var(--radius);
+   font-weight: var(--font-weight-2);
+   border: 1px solid var(--gray700);
+   cursor: pointer;
+   background-color: var(--gray700);
+   color: var(--gray400);
+   transition: ease 0.3s;
+}
+
+.delete-post-btn:hover {
+   background-color: var(--gray600);
+   color: var(--gray300);
+}
+
+.cardname {
+   font-size: var(--font-size-1);
+   color: var(--gray100);
+   font-weight: var(--font-weight-2);
+}
+
+.date {
+   font-size: var(--font-size-1);
+   color: var(--gray400);
+   font-weight: var(--font-weight-2);
+}
+
+.post-title {
+   color: var(--gray100);
+   font-weight: var(--font-weight-3);
+   font-size: var(--font-size-5);
+}
+
+.post-content {
+   color: var(--gray300);
+   font-size: var(--font-size-2);
+   font-weight: var(--font-weight-1);
+   overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-box-orient: vertical;
+   -webkit-line-clamp: 2;
+}
+
+.post-acess {
+   color: var(--brand100);
+   font-weight: var(--font-weight-2);
+   font-size: var(--font-size-2);
+   cursor: pointer;
+   width: fit-content;
+}
+
+

@@ -1,9 +1,9 @@
 main { 
-   gap: 40px;
+   gap: 100px;
    flex-wrap: wrap;
 }
 
-.left-aside {
+.right-aside {
    display: flex;
    flex-direction: column;
    gap: 24px;
@@ -11,58 +11,59 @@ main {
    color: var(--gray100);
 }
 
-.left-aside em {
+.right-aside em {
    color: var(--brand100);
    font-style: normal;
 }
 
-.left-aside span {
+.right-aside span {
    display: flex;
    flex-direction: column;
-   gap: 25px;
+   gap: 24px;
    width: 320px;
 }
 
-.left-aside h1 {
+.right-aside h1 {
    font-size: var(--font-size-3);
    line-height: 48px;
 }
 
-.left-aside h2 {
+.right-aside h2 {
    font-size: var(--font-size-3);
    line-height: 48px;
 }
- 
-.left-aside p {
+
+.right-aside p {
    font-size: var(--font-size-2);
    color: var(--gray300);
 }
 
-.right-aside {
+.left-aside {
    width: 368px;
    max-width: 100%;
+   position: relative;
 }
 
-.right-aside form {
+.left-aside form {
    display: flex;
    flex-direction: column;
-   padding: 44px 24px;
+   padding: 44px 24px 18px 24px;
    border: 1px solid var(--gray600);
    border-radius: var(--radius);
 }
 
-.right-aside form * {
+.left-aside form * {
    margin-bottom: 26px;
 }
 
-.right-aside form > label {
+.left-aside form > label {
    margin-bottom: 10px;
    font-size: var(--font-size-2);
    color: var(--gray100);
    font-weight: var(--font-weight-2);
 }
 
-.right-aside input {
+.left-aside input {
    border: solid 1px var(--gray600);
    height: 44px;
    border-radius: var(--radius);
@@ -71,22 +72,22 @@ main {
    padding: 10px;
 }
 
-.right-aside input::placeholder {
+.left-aside input::placeholder {
    font-size: var(--font-size-2);
    color: var(--gray400);
    font-weight: var(--font-weight-1);
 }
 
-.right-aside h3 {
+.left-aside h3 {
    font-size: var(--font-size-4);
    color: var(--gray100);
    font-weight: var(--font-weight-2);
 }
 
-.right-aside p {
+.left-aside p {
    text-align: center;
    color: var(--gray100);
-}
+} 
 
 #form-alert {
    text-align: left;
@@ -94,15 +95,12 @@ main {
    font-size: var(--font-size-1);
    font-weight: var(--font-weight-1);
 }
-
+ 
 .hidden {
    display: none;
 }
 
-.form-login-btn {
-   display: flex;
-   align-items: center;
-   justify-content: center;
+.form-register-btn {
    height: 38px;
    background-color: var(--brand100);
    color: var(--gray900);
@@ -122,7 +120,7 @@ main {
    margin: 0;
 }
 
-.register-btn {
+.back-to-login-btn {
    height: 38px;
    background-color: transparent;
    color: var(--gray100);
@@ -133,14 +131,23 @@ main {
    cursor: pointer;
 }
 
-.form-question {
-   font-size: var(--font-size-1);
-   font-weight: var(--font-weight-2);
+
+.back-to-login-btn {
+   height: 38px;
+   background-color: transparent;
    color: var(--gray100);
+   border: 1px solid var(--gray600);
+   border-radius: var(--radius);
+   font-weight: var(--font-weight-2);
+   font-size: var(--font-size-2);
+   cursor: pointer;
 }
 
-.form-info {
+.btn-top {
+   height: 32px;
    font-size: var(--font-size-1);
-   font-weight: var(--font-weight-1);
-   color: var(--gray300);
+   padding:0px 8px;
+   width: fit-content;
+   position: absolute;
+   left: 208px;
 }
