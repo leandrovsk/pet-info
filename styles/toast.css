@@ -20,6 +20,11 @@
    100% {right: 30px; bottom:-100px}
 }
 
+.toast-container a {
+   color: var(--brand100);
+   font-weight: var(--font-weight-1);
+}
+
 .toast-container > img {
    width: 24px;
 }

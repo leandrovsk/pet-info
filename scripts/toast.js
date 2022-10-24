@@ -15,7 +15,7 @@ const toast = (title, message) => {
    h3.innerText = title
 
    const p = document.createElement('p')
-   p.innerText = message
+   p.innerHTML = message
 
    textContainer.append(h3, p)
    container.append(icon, textContainer)

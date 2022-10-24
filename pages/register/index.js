@@ -2,7 +2,7 @@ import { create } from "../../scripts/api.js";
 
 const toastSucess = [
   "Sua conta foi criada com sucesso!",
-  "Agora você pode acessar os conteúdos utilizando seu usuário e senha na página de login: Acessar a página de login",
+  "Agora você pode acessar os conteúdos utilizando seu usuário e senha na página de login: <a href='/'>Acessar a página de login</a>",
 ];
 
 const leftAside = document.querySelector(".left-aside");
@@ -124,9 +124,10 @@ const eventsRegister = () => {
   async function registerUser(data) {
     const response = await create(data);
 
+    buttom.innerHTML = "";
+    buttom.innerHTML = "Cadastrar";
+
     if (response.message !== undefined) {
-      buttom.innerHTML = "";
-      buttom.innerHTML = "Cadastrar";
       buttom.classList.remove("disable");
       alert.classList.remove("hidden");
       alert.innerText = response.message;
