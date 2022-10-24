@@ -59,7 +59,7 @@ const eventsLogin = () => {
       });
 
       element.addEventListener("keyup", () => {
-        if (email.value !== "" && password.value !== "") {
+        if (email.value !== "" && password.value !== "" && button.innerText == 'Acessar') {
           button.classList.remove("disable");
         } else {
           button.classList.add("disable");
@@ -101,6 +101,7 @@ const eventsLogin = () => {
   })
 
   async function loginUser(data) {
+
     const response = await login(data);
 
     if (response.message !== undefined) {
@@ -117,7 +118,6 @@ const eventsLogin = () => {
       }
       console.log(response.message);
     } else {
-      button.classList.add("disable");
       console.log("login efetuado com sucesso");
       window.location.replace("/pages/home");
       };

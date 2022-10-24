@@ -58,7 +58,7 @@ const eventsRegister = () => {
   const email = document.querySelector("#email");
   const avatar = document.querySelector("#avatar");
   const password = document.querySelector("#password");
-  const buttom = document.querySelector(".form-register-btn");
+  const button = document.querySelector(".form-register-btn");
 
   elements.forEach((element) => {
     const fadeBtn = () => {
@@ -69,11 +69,12 @@ const eventsRegister = () => {
             email.value !== "" &&
             password.value !== "" &&
             username.value !== "" &&
-            avatar.value !== ""
+            avatar.value !== "" &&
+            button.innerText == 'Cadastrar'
           ) {
-            buttom.classList.remove("disable");
+            button.classList.remove("disable");
           } else {
-            buttom.classList.add("disable");
+            button.classList.add("disable");
           }
         });
       }
@@ -99,14 +100,14 @@ const eventsRegister = () => {
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
 
-      buttom.innerHTML = "";
-      buttom.insertAdjacentHTML(
+      button.innerHTML = "";
+      button.insertAdjacentHTML(
         "beforeend",
         `
       <img src='/assets/img/spinner.svg' alt='spinner' class='loading' id='loading'>
     `
       );
-      buttom.classList.add("disable");
+      button.classList.add("disable");
 
       const body = {};
 
@@ -124,11 +125,11 @@ const eventsRegister = () => {
   async function registerUser(data) {
     const response = await create(data);
 
-    buttom.innerHTML = "";
-    buttom.innerHTML = "Cadastrar";
+    button.innerHTML = "";
+    button.innerHTML = "Cadastrar";
 
     if (response.message !== undefined) {
-      buttom.classList.remove("disable");
+      button.classList.remove("disable");
       alert.classList.remove("hidden");
       alert.innerText = response.message;
       console.log(response.message);
