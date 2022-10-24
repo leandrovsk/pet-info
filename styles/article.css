@@ -36,39 +36,6 @@
    right: 0;
 }
 
-.edit-post-btn {
-   height: 32px;
-   padding: 0px 8px;
-   border-radius: var(--radius);
-   font-weight: var(--font-weight-2);
-   border: 1px solid var(--gray600);
-   cursor: pointer;
-   background-color: transparent;
-   color: var(--gray100);
-   transition: ease 0.3s;
-}
-
-.edit-post-btn:hover {
-   background-color: var(--gray800);
-}
-
-.delete-post-btn {
-   height: 32px;
-   padding: 0px 8px;
-   border-radius: var(--radius);
-   font-weight: var(--font-weight-2);
-   border: 1px solid var(--gray700);
-   cursor: pointer;
-   background-color: var(--gray700);
-   color: var(--gray400);
-   transition: ease 0.3s;
-}
-
-.delete-post-btn:hover {
-   background-color: var(--gray600);
-   color: var(--gray300);
-}
-
 .cardname {
    font-size: var(--font-size-1);
    color: var(--gray100);

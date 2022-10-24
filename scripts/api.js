@@ -25,8 +25,7 @@ export async function login(data) {
    return response
 
   } catch(err) {
-
-   return err
+   console.log(err)
   }
 }
 
@@ -45,12 +44,14 @@ export async function create(data) {
       const response = await responseJSON.json()
    
       return response
+
    } catch (err) {
-      return err
+      console.log(err)
    }
 }
 
 export async function getUser(token) {
+  try {
    const option = {
       'method': 'GET',
       'headers': {
@@ -64,25 +65,35 @@ export async function getUser(token) {
    const response = await responseJSON.json()
 
    return response
+
+  } catch(err) {
+   console.log(err)
+  }
 }
 
 export async function insertPost(data, token) {
-   const option = {
-      'method': 'POST',
-      'headers': {
-         'Content-Type': 'application/json',
-         'Authorization': `Bearer ${token}`
-      },
-      body: JSON.stringify(data)
+   try {
+      const option = {
+         'method': 'POST',
+         'headers': {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
+         },
+         body: JSON.stringify(data)
+      }
+   
+      const responseJSON = await fetch(`${baseURL}posts/create`, option)
+      const response = await responseJSON.json()
+   
+      return response
+
+   } catch(err) {
+      console.log(err)
    }
-
-   const responseJSON = await fetch(`${baseURL}posts/create`, option)
-   const response = await responseJSON.json()
-
-   return response
 }
 
 export async function getPosts(token) {
+  try {
    const option = {
       'method': 'GET',
       'headers': {
@@ -96,36 +107,49 @@ export async function getPosts(token) {
    const response = await responseJSON.json()
 
    return response
+
+  } catch(err) {
+   console.log(err)
+  }
 }
 
-
 export async function updatePost(data, id, token) {
-   const option = {
-      'method': 'PATCH',
-      'headers': {
-         'Content-Type': 'application/json',
-         'Authorization': `Bearer ${token}`
-      },
-      body: JSON.stringify(data)
+   try {
+      const option = {
+         'method': 'PATCH',
+         'headers': {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
+         },
+         body: JSON.stringify(data)
+      }
+   
+      const responseJSON = await fetch(`${baseURL}posts/${id}`, option)
+   
+      const response = await responseJSON.json()
+   
+      return response
+
+   } catch(err) {
+      console.log(err)
    }
-
-   const responseJSON = await fetch(`${baseURL}posts/${id}`, option)
-
-   const response = await responseJSON.json()
-
-   return response
 }
 
 export async function deletePost(postID, token) {
-   const option = {
-      'method': 'DELETE',
-      'headers': {
-         'Authorization': `Bearer ${token}`
+   try {
+      const option = {
+         'method': 'DELETE',
+         'headers': {
+            'Authorization': `Bearer ${token}`
+         }
       }
+      const responseJSON = await fetch(`${baseURL}posts/${postID}`, option)
+   
+      const response = await responseJSON.json()
+   
+      return response
+      
+   } catch(err) {
+      console.log(err)
    }
-   const responseJSON = await fetch(`${baseURL}posts/${postID}`, option)
-
-   const response = await responseJSON.json()
-
-   return response
 }

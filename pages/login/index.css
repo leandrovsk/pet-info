@@ -62,7 +62,7 @@ main {
    font-weight: var(--font-weight-2);
 }
 
-.right-aside input {
+.login-input {
    border: solid 1px var(--gray600);
    height: 44px;
    border-radius: var(--radius);
@@ -93,24 +93,11 @@ main {
    color: var(--alert100);
    font-size: var(--font-size-1);
    font-weight: var(--font-weight-1);
+   opacity: 0.7;
 }
 
 .hidden {
    display: none;
-}
-
-.form-login-btn {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   height: 38px;
-   background-color: var(--brand100);
-   color: var(--gray900);
-   border: none;
-   border-radius: var(--radius);
-   font-weight: var(--font-weight-2);
-   font-size: var(--font-size-2);
-   cursor: pointer;
 }
 
 .disable {
@@ -120,17 +107,6 @@ main {
 
 #loading {
    margin: 0;
-}
-
-.register-btn {
-   height: 38px;
-   background-color: transparent;
-   color: var(--gray100);
-   border: 1px solid var(--gray600);
-   border-radius: var(--radius);
-   font-weight: var(--font-weight-2);
-   font-size: var(--font-size-2);
-   cursor: pointer;
 }
 
 .form-question {
@@ -143,4 +119,8 @@ main {
    font-size: var(--font-size-1);
    font-weight: var(--font-weight-1);
    color: var(--gray300);
+}
+
+.alert-input-border {
+  border:1px solid var(--alert100);
 }

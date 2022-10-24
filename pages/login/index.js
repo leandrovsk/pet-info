@@ -26,9 +26,9 @@ function renderRightAside() {
     `<form>
     <h3>Login</h3>
     <label for='email'>Email</label>
-    <input type='text' id='email' name='email' placeholder='Digite seu email aqui'>
+    <input type='text' id='email' class='login-input'name='email' placeholder='Digite seu email aqui'>
     <label for='password'>Senha</label>
-    <input type='password' id='password' name='password' placeholder='Digite sua senha aqui'>
+    <input type='password' id='password' class='login-input' name='password' placeholder='Digite sua senha aqui'>
     <p class='hidden' id='form-alert'></p>
     <button type='submit' class='form-login-btn disable'>Acessar</button>
     <p class='form-question'>Ainda não possui conta?</p>
@@ -48,16 +48,21 @@ const eventsLogin = () => {
   const elements = [...form];
   const email = document.querySelector("#email");
   const password = document.querySelector("#password");
-  const buttom = document.querySelector(".form-login-btn");
+  const button = document.querySelector(".form-login-btn");
 
   elements.forEach((element) => {
     if (element.tagName == "INPUT") {
-      element.addEventListener("keyup", () => {
+      element.addEventListener("keydown", () => {
+        password.classList.remove('alert-input-border')
+        email.classList.remove('alert-input-border')
         alert.classList.add("hidden");
+      });
+
+      element.addEventListener("keyup", () => {
         if (email.value !== "" && password.value !== "") {
-          buttom.classList.remove("disable");
+          button.classList.remove("disable");
         } else {
-          buttom.classList.add("disable");
+          button.classList.add("disable");
         }
       });
     }
@@ -75,14 +80,15 @@ const eventsLogin = () => {
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    buttom.innerHTML = "";
-    buttom.insertAdjacentHTML(
+    button.innerHTML = "";
+    button.insertAdjacentHTML(
       "beforeend",
       `
       <img src='/assets/img/spinner.svg' alt='spinner' class='loading' id='loading'>
     `
     );
-    buttom.classList.add("disable");
+
+    button.classList.add("disable");
 
     const body = {};
 
@@ -97,16 +103,23 @@ const eventsLogin = () => {
   async function loginUser(data) {
     const response = await login(data);
 
-    if (response.message) {
-      buttom.innerHTML = "";
-       buttom.innerHTML = "Acessar";
-      buttom.classList.remove("disable");
+    if (response.message !== undefined) {
+      button.innerHTML = "";
+      button.innerHTML = "Acessar";
+      button.classList.remove("disable");
       alert.classList.remove("hidden");
       alert.innerText = response.message;
+      if(response.message == 'A senha está incorreta') {
+        password.classList.add('alert-input-border')
+      }
+      if(response.message == 'O email está incorreto') {
+        email.classList.add('alert-input-border')
+      }
       console.log(response.message);
     } else {
+      button.classList.add("disable");
       console.log("login efetuado com sucesso");
-        window.location.replace("/pages/home");
+      window.location.replace("/pages/home");
       };
     }
 };

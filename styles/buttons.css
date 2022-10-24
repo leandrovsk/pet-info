@@ -1,0 +1,209 @@
+.new-post-btn {
+   height: 38px;
+   padding: 0px 16px;
+   background-color: var(--brand100);
+   border: 1px solid var(--brand100);
+   color: var(--gray900);
+   font-weight: var(--font-weight-2);
+   font-size: var(--font-size-2);
+   border-radius: var(--radius);
+   cursor: pointer;
+}
+
+.new-post-btn:hover {
+   background-color: var(--brand200);
+}
+
+.logout-btn {
+   background-color: var(--gray900);
+   color: var(--gray400);
+   border: none;
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   padding-left: 17px;
+   height: 55px;
+   cursor: pointer;
+   transition: ease 0.5s;
+   font-size: var(--font-size-1);
+   font-weight: var(--font-weight-2);
+}
+
+.logout-btn:hover {
+   background-color: var(--gray700);
+   color: var(--gray100);
+}
+
+.logout-btn img {
+   width: 14px;
+}
+
+.edit-post-btn {
+   height: 32px;
+   padding: 0px 8px;
+   border-radius: var(--radius);
+   font-weight: var(--font-weight-2);
+   border: 1px solid var(--gray600);
+   cursor: pointer;
+   background-color: transparent;
+   color: var(--gray100);
+   transition: ease 0.3s;
+}
+
+.edit-post-btn:hover {
+   background-color: var(--gray800);
+}
+
+.delete-post-btn {
+   height: 32px;
+   padding: 0px 8px;
+   border-radius: var(--radius);
+   font-weight: var(--font-weight-2);
+   border: 1px solid var(--gray700);
+   cursor: pointer;
+   background-color: var(--gray700);
+   color: var(--gray400);
+   transition: ease 0.3s;
+}
+
+.delete-post-btn:hover {
+   background-color: var(--gray600);
+   color: var(--gray300);
+}
+
+
+.modal-close-btn {
+   height: 32px;
+   padding: 4px 14px;
+   background-color: var(--gray600) ;
+   border: none;
+   position: absolute;
+   right: 24px;
+   top: 32px;
+   color: var(--gray400);
+   font-size: var(--font-size-1);
+   font-family: 'Nunito', sans-serif;;
+   border-radius: var(--radius);
+   font-weight: var(--font-weight-4);
+   cursor: pointer;
+}
+
+.close-btn {
+   height: 32px;
+   padding: 4px 14px;
+   background-color: var(--gray600) ;
+   border: none;
+   position: absolute;
+   right: 0px;
+   color: var(--gray400);
+   font-size: var(--font-size-1);
+   font-family: 'Nunito', sans-serif;;
+   border-radius: var(--radius);
+   font-weight: var(--font-weight-4);
+   cursor: pointer;
+}
+
+.modal-cancel-btn {
+   padding: 7px 20px;
+   border-radius: var(--radius);
+   font-weight: var(--font-weight-2);
+   border: 1px solid var(--gray700);
+   cursor: pointer;
+   background-color: var(--gray700);
+   color: var(--gray400);
+   font-weight: var(--font-weight-2);
+   font-size: var(--font-size-2);
+   transition: ease 0.3s;
+}
+
+.modal-cancel-btn:hover {
+   background-color: var(--gray600);
+   color: var(--gray300);
+}
+
+.modal-post-btn {
+   background-color: var(--brand100);
+   border-radius: var(--radius);
+   padding: 7px 20px;
+   font-weight: var(--font-weight-2);
+   font-size: var(--font-size-2);
+   border: none;
+   color: var(--gray900);
+   cursor: pointer;
+}
+
+.modal-post-btn:hover {
+   background-color: var(--brand200);
+}
+
+.modal-alert-btn {
+   background-color: var(--alert100);
+   border-radius: var(--radius);
+   padding: 7px 20px;
+   font-weight: var(--font-weight-2);
+   font-size: var(--font-size-2);
+   border: none;
+   color: var(--gray900);
+   cursor: pointer;
+   transition: 0.3s ease;
+}
+
+.modal-alert-btn:hover {
+   background-color: var(--alert200);
+}
+
+.form-login-btn {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 38px;
+   background-color: var(--brand100);
+   color: var(--gray900);
+   border: none;
+   border-radius: var(--radius);
+   font-weight: var(--font-weight-2);
+   font-size: var(--font-size-2);
+   cursor: pointer;
+}
+
+.register-btn {
+   height: 38px;
+   background-color: transparent;
+   color: var(--gray100);
+   border: 1px solid var(--gray600);
+   border-radius: var(--radius);
+   font-weight: var(--font-weight-2);
+   font-size: var(--font-size-2);
+   cursor: pointer;
+}
+
+.form-register-btn {
+   height: 38px;
+   background-color: var(--brand100);
+   color: var(--gray900);
+   border: none;
+   border-radius: var(--radius);
+   font-weight: var(--font-weight-2);
+   font-size: var(--font-size-2);
+   cursor: pointer;
+}
+
+.back-to-login-btn {
+   height: 38px;
+   background-color: transparent;
+   color: var(--gray100);
+   border: 1px solid var(--gray600);
+   border-radius: var(--radius);
+   font-weight: var(--font-weight-2);
+   font-size: var(--font-size-2);
+   cursor: pointer;
+}
+
+.btn-top {
+   height: 32px;
+   font-size: var(--font-size-1);
+   padding:0px 8px;
+   width: fit-content;
+   position: absolute;
+   left: 208px;
+}

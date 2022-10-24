@@ -100,17 +100,6 @@ main {
    display: none;
 }
 
-.form-register-btn {
-   height: 38px;
-   background-color: var(--brand100);
-   color: var(--gray900);
-   border: none;
-   border-radius: var(--radius);
-   font-weight: var(--font-weight-2);
-   font-size: var(--font-size-2);
-   cursor: pointer;
-}
-
 .disable {
    pointer-events: none;
    opacity: 40%;
@@ -120,34 +109,4 @@ main {
    margin: 0;
 }
 
-.back-to-login-btn {
-   height: 38px;
-   background-color: transparent;
-   color: var(--gray100);
-   border: 1px solid var(--gray600);
-   border-radius: var(--radius);
-   font-weight: var(--font-weight-2);
-   font-size: var(--font-size-2);
-   cursor: pointer;
-}
 
-
-.back-to-login-btn {
-   height: 38px;
-   background-color: transparent;
-   color: var(--gray100);
-   border: 1px solid var(--gray600);
-   border-radius: var(--radius);
-   font-weight: var(--font-weight-2);
-   font-size: var(--font-size-2);
-   cursor: pointer;
-}
-
-.btn-top {
-   height: 32px;
-   font-size: var(--font-size-1);
-   padding:0px 8px;
-   width: fit-content;
-   position: absolute;
-   left: 208px;
-}

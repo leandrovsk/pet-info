@@ -33,22 +33,6 @@ header > span > div {
    gap: 12px;
 }
 
-.new-post-btn {
-   height: 38px;
-   padding: 0px 16px;
-   background-color: var(--brand100);
-   border: 1px solid var(--brand100);
-   color: var(--gray900);
-   font-weight: var(--font-weight-2);
-   font-size: var(--font-size-2);
-   border-radius: var(--radius);
-   cursor: pointer;
-}
-
-.new-post-btn:hover {
-   background-color: var(--brand200);
-}
-
 header > span > nav {
    display: flex;
    width: 220px;
@@ -83,30 +67,6 @@ header figure {
    display: flex;
    align-items: center;
    font-size: var(--font-size-2);
-}
-
-.logout-btn {
-   background-color: var(--gray900);
-   color: var(--gray400);
-   border: none;
-   display: flex;
-   align-items: center;
-   gap: 10px;
-   padding-left: 17px;
-   height: 55px;
-   cursor: pointer;
-   transition: ease 0.5s;
-   font-size: var(--font-size-1);
-   font-weight: var(--font-weight-2);
-}
-
-.logout-btn:hover {
-   background-color: var(--gray700);
-   color: var(--gray100);
-}
-
-.logout-btn img {
-   width: 14px;
 }
 
 .feed-bar-container {

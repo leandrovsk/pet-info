@@ -124,7 +124,7 @@ const eventsRegister = () => {
   async function registerUser(data) {
     const response = await create(data);
 
-    if (response.message) {
+    if (response.message !== undefined) {
       buttom.innerHTML = "";
       buttom.innerHTML = "Cadastrar";
       buttom.classList.remove("disable");

@@ -28,7 +28,7 @@ const checkToken = () => {
 checkToken();
 
 const signOut = () => {
-  const localToken = localStorage.removeItem("userToken");
+  localStorage.removeItem("userToken");
   window.location.replace("/");
 };
 
